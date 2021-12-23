@@ -47,6 +47,9 @@
 
     pass
     nextcloud-client
+    passff-host
+    (firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
+
   ];
 
   programs.git = {
