@@ -65,7 +65,7 @@
       font = {
         size = 8.5;
         use_thin_strokes = true;
-        style = "regular";
+        style = "bold";
         normal.family = "FuraCode Nerd Font";
         regular.family = "FuraCode Nerd Font";
         bold.family = "FuraCode Nerd Font";
