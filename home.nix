@@ -49,6 +49,12 @@
     nextcloud-client
   ];
 
+  programs.git = {
+    enable = true;
+    userName = "Jorri Fransen";
+    userEmail = "jorri@jorrifransen.nl";
+  };
+
   programs.alacritty = {
     enable = true;
     settings = {
