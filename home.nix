@@ -67,6 +67,7 @@
         use_thin_strokes = true;
         style = "regular";
         normal.family = "FuraCode Nerd Font";
+        regular.family = "FuraCode Nerd Font";
         bold.family = "FuraCode Nerd Font";
         italic.family = "FuraCode Nerd Font";
       };
