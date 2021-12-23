@@ -19,7 +19,7 @@ in
     barbar.nvim
     vim-llvm
 
-    nvim-lspconfig
+    #nvim-lspconfig
     #nvim-cmp
     #cmp-nvim-lsp
     #vim-vsnip
