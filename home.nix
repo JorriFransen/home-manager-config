@@ -56,6 +56,10 @@
     enable = true;
     userName = "Jorri Fransen";
     userEmail = "jorri@jorrifransen.nl";
+    signing = {
+      signByDefault = true;
+      key = "0980CB294516B081";
+    };
   };
 
   programs.alacritty = {
