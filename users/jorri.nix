@@ -1,4 +1,7 @@
 { config, pkgs, lib, ... }:
+let
+  isNixOS = builtins.pathExists /etc/NIXOS;
+in
 {
 
   home.stateVersion = "21.11";
@@ -39,10 +42,14 @@
     xclip
 
     pass
-    #nextcloud-client
-    #passff-host
-    #(firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
 
+  ]
+  ++ lib.optionals isNixOS
+  [
+    nextcloud-client
+    passff-host
+    (firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
+    alacritty
   ];
 
   programs.git = {
