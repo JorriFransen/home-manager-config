@@ -6,7 +6,7 @@ in
   enable = true;
   vimAlias = true;
   viAlias = true;
-  extraConfig = builtins.readFile ./init.vim;
+  extraConfig = builtins.readFile ./config/init.vim;
   extraPackages = with pkgs; [
     clang-tools # for clangd/coc/lsp
     fzf
