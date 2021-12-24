@@ -1,50 +1,57 @@
-{ pkgs }:
+{ config, pkgs, lib, ... }:
 let
   vim-plugins = import ./plugins.nix { inherit pkgs; };
 in
 {
-  enable = true;
-  vimAlias = true;
-  viAlias = true;
-  extraConfig = builtins.readFile ./config/init.vim;
-  extraPackages = with pkgs; [
-    clang-tools # for clangd/coc/lsp
-    fzf
-    fd
-    ripgrep
-    nodejs # for coc
+  xdg.configFile = {
+    "nvim/after".source = ./config/after;
+    "nvim/compiler".source = ./config/compiler;
+  };
+
+  nixpkgs.overlays = [
+    ( import ./overlay.nix )
   ];
-  plugins = with pkgs.vimPlugins; with vim-plugins; [
-    asyncrun.vim
-    barbar.nvim
-    vim-llvm
 
-    #nvim-lspconfig
-    #nvim-cmp
-    #cmp-nvim-lsp
-    #vim-vsnip
-    coc-nvim
-    coc-clangd
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    viAlias = true;
+    extraConfig = builtins.readFile ./config/init.vim;
+    extraPackages = with pkgs; [
+      clang-tools # for clangd/coc/lsp
+      fzf
+      fd
+      ripgrep
+      nodejs # for coc
+    ];
+    plugins = with pkgs.vimPlugins; with vim-plugins; [
+      asyncrun.vim
+      barbar.nvim
+      vim-llvm
 
-    (nvim-treesitter.withPlugins (
-      plugins: with plugins; [
-        tree-sitter-nix
-        tree-sitter-cpp
-        tree-sitter-c
-        tree-sitter-lua
-        tree-sitter-bash
-      ]
-    ))
+      coc-nvim
+      coc-clangd
 
-    nvim-web-devicons
-    delimitMate
-    gruvbox-community
-    vim-nix
-    fzf-vim
-    vim-airline
-    vim-airline-themes
-    nerdcommenter
-    undotree
-    vim-smoothie
-  ];
+      (nvim-treesitter.withPlugins
+        (plugins: with plugins; [
+          tree-sitter-nix
+          tree-sitter-cpp
+          tree-sitter-c
+          tree-sitter-lua
+          tree-sitter-bash
+        ])
+      )
+
+      nvim-web-devicons
+      delimitMate
+      gruvbox-community
+      vim-nix
+      fzf-vim
+      vim-airline
+      vim-airline-themes
+      nerdcommenter
+      undotree
+      vim-smoothie
+    ];
+  };
 }
