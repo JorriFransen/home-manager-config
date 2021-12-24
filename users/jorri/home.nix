@@ -34,7 +34,7 @@
     tree
 
     subversionClient
-    git
+    git gh
     fossil tk tcl
 
     gdb
