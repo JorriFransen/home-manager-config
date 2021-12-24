@@ -31,6 +31,7 @@
     btop
     tmux
     zsh
+    tree
 
     subversionClient
     git
