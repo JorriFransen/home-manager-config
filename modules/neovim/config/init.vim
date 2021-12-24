@@ -62,7 +62,7 @@ nnoremap <C-k> :cp<cr>
 noremap <leader>ga :CocCommand clangd.switchSourceHeader<CR>
 
 set listchars=eol:·,tab:⍿·,trail:×
-set list
+"set list
 
 let bufferline = get(g:, 'bufferline', {})
 let bufferline.auto_hide = v:true
