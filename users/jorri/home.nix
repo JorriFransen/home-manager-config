@@ -47,9 +47,9 @@
     xclip
 
     pass
-    nextcloud-client
-    passff-host
-    (firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
+    #nextcloud-client
+    #passff-host
+    #(firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
 
   ];
 
