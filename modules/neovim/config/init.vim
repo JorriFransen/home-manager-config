@@ -59,7 +59,7 @@ nnoremap <C-j> :cn<cr>
 nnoremap <leader>ep :cp<cr>
 nnoremap <C-k> :cp<cr>
 
-noremap <leader>ga :ClangdSwitchSourceHeader<CR>
+noremap <leader>ga :CocCommand clangd.switchSourceHeader<CR>
 
 set listchars=eol:·,tab:⍿·,trail:×
 set list
