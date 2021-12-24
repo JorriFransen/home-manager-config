@@ -26,7 +26,15 @@ in
     coc-nvim
     coc-clangd
 
-    nvim-treesitter
+    (nvim-treesitter.withPlugins (
+      plugins: with plugins; [
+        tree-sitter-nix
+        tree-sitter-cpp
+        tree-sitter-c
+        tree-sitter-lua
+        tree-sitter-bash
+      ]
+    ))
 
     nvim-web-devicons
     delimitMate
