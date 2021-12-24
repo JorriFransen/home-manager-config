@@ -13,7 +13,7 @@
 
 
   imports = [
-    ./neovim
+    ../modules/neovim
   ];
 
   nixpkgs.config.allowUnfree = true;
