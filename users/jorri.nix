@@ -17,6 +17,10 @@ in
 
   imports = [
     ../modules/neovim
+  ]
+  ++ lib.optionals isNixOS
+  [
+    ../modules/alacritty
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -49,7 +53,6 @@ in
     nextcloud-client
     passff-host
     (firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
-    alacritty
   ];
 
   programs.git = {
