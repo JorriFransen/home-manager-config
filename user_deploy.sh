@@ -1,4 +1,4 @@
 
-source ./user_common.sh
+. ./user_common.sh
 
 home-manager switch
