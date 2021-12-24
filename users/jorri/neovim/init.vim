@@ -26,7 +26,6 @@ set signcolumn=number
 
 set termguicolors
 colorscheme gruvbox
-let g:airline_theme='gruvbox'
 
 let mapleader = " "
 map <leader>; <plug>NERDCommenterToggle
@@ -75,6 +74,20 @@ function! ToggleQuickfix()
         cclose
     endif
 endfunction
+
+
+"
+" Begin airline config
+"
+
+let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ""
+let g:airline_right_sep = ""
+
+"
+" End airline config
+"
 
 
 " set completeopt=menu,menuone,noselect
