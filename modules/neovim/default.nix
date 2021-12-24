@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... }:
 let
   vim-plugins = import ./plugins.nix { inherit pkgs; };
+
+  isNixOS = builtins.pathExists /etc/NIXOS;
 in
 {
   xdg.configFile = {
@@ -25,22 +27,14 @@ in
       nodejs # for coc
     ];
     plugins = with pkgs.vimPlugins; with vim-plugins; [
-      asyncrun.vim
+      #asyncrun.vim
       barbar.nvim
       vim-llvm
 
       coc-nvim
       coc-clangd
 
-      (nvim-treesitter.withPlugins
-        (plugins: with plugins; [
-          tree-sitter-nix
-          tree-sitter-cpp
-          tree-sitter-c
-          tree-sitter-lua
-          tree-sitter-bash
-        ])
-      )
+
 
       nvim-web-devicons
       delimitMate
@@ -52,6 +46,19 @@ in
       nerdcommenter
       undotree
       vim-smoothie
+    ]
+    ++ lib.optionals isNixOS
+    [
+      nvim-treesitter
+    ]
+    ++ lib.optionals (!isNixOS)
+    [
+      (nvim-treesitter.withPlugins
+        (plugins: with plugins; [
+          tree-sitter-nix
+          tree-sitter-cpp
+        ])
+      )
     ];
   };
 }
