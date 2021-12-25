@@ -44,7 +44,7 @@ noremap <leader>k :wincmd k<CR>
 noremap <leader>wv :vsplit<cr>
 noremap <leader>ws :split<cr>
 
-noremap <leader>thh :noh<CR>
+noremap <leader>thh :set hls!<CR>
 noremap <leader>tt :wincmd T<CR>
 noremap <leader>T :tabe<CR>:terminal<CR>i<CR>
 noremap <C-h> :tabp<CR>
