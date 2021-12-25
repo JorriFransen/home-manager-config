@@ -38,6 +38,8 @@ in
 
     gdb
 
+    fd
+    bat
     exa
     fzf
     ripgrep
