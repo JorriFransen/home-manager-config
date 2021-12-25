@@ -27,7 +27,7 @@ in
       nodejs # for coc
     ];
     plugins = with pkgs.vimPlugins; with vim-plugins; [
-      #asyncrun.vim
+      asyncrun.vim
       barbar.nvim
       vim-llvm
 
