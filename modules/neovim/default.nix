@@ -57,6 +57,7 @@ in
         (plugins: with plugins; [
           tree-sitter-nix
           tree-sitter-cpp
+          tree-sitter-lua
         ])
       )
     ];
