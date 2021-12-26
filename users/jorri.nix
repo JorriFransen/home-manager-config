@@ -21,7 +21,7 @@ in
   ]
   ++ lib.optionals isNixOS
   [
-    ../modules/alacritty
+    ../modules/alacritty.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
