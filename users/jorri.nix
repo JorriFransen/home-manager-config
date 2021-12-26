@@ -18,6 +18,7 @@ in
   imports = [
     ../modules/neovim
     ../modules/zsh.nix
+    ../modules/st.nix
   ]
   ++ lib.optionals isNixOS
   [
