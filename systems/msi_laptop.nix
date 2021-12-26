@@ -123,6 +123,7 @@ in
     zsh
 
     pinentry_qt
+    khotkeys
 
     nvidia-offload
   ];
