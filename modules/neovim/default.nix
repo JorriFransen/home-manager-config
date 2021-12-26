@@ -34,8 +34,6 @@ in
       coc-nvim
       coc-clangd
 
-
-
       nvim-web-devicons
       delimitMate
       gruvbox-community

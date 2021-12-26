@@ -17,6 +17,7 @@ in
 
   imports = [
     ../modules/neovim
+    ../modules/zsh.nix
   ]
   ++ lib.optionals isNixOS
   [
@@ -29,7 +30,6 @@ in
 
     btop
     tmux
-    zsh
     tree
 
     subversionClient
@@ -38,10 +38,7 @@ in
 
     gdb
 
-    fd
     bat
-    exa
-    fzf
     ripgrep
     colordiff
 
