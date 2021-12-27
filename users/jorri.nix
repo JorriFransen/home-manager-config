@@ -19,10 +19,6 @@ in
     ../modules/neovim
     ../modules/zsh.nix
     ../modules/st.nix
-  ]
-  ++ lib.optionals isNixOS
-  [
-    ../modules/alacritty.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
