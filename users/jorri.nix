@@ -1,4 +1,7 @@
 { config, pkgs, lib, ... }:
+let 
+  isNixOS = builtins.pathExists /etc/NIXOS;
+in
 {
 
   home.stateVersion = "21.11";
