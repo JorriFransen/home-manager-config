@@ -21,6 +21,7 @@
       enable = true;
       plugins = [
         { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
+        { name = "chisui/zsh-nix-shell"; }
       ];
     };
 
