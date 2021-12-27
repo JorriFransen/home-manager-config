@@ -1,3 +1,4 @@
+#!/bin/sh
 
 TARGET_SYS="msi_laptop"
 SYS_CONFIG_PATH="./systems/$TARGET_SYS.nix"

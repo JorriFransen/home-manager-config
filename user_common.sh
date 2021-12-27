@@ -1,3 +1,4 @@
+#!/bin/sh
 
 TARGET_USER="jorri"
 
