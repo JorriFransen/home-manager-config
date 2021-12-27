@@ -56,5 +56,10 @@
       signByDefault = true;
       key = "0980CB294516B081";
     };
+    extraConfig = {
+      pull = {
+        rebase = true;
+      };
+    };
   };
 }
