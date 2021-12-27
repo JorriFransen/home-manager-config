@@ -29,6 +29,8 @@
       ls = "exa --group-directories-first ";
       nc = "sudo systemctl start nordvpnd && nordvpn connect";
       nd = "nordpvn disconnect && sudo systemctl stop nordvpnd";
+      sctl = "systemctl";
+      ssctl = "sudo systemctl ";
     };
 
     sessionVariables = {
