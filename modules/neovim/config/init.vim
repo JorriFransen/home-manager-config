@@ -27,6 +27,10 @@ set signcolumn=number
 set termguicolors
 colorscheme gruvbox
 
+if exists('g:neovide')
+    set guifont=FiraCode\ Nerd\ Font\ Mono:h8.5
+endif
+
 let mapleader = " "
 map <leader>; <plug>NERDCommenterToggle
 inoremap {<CR> {<CR>}<Esc>O

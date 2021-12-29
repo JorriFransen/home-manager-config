@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }:
-let 
+let
   isNixOS = builtins.pathExists /etc/NIXOS;
 in
 {
@@ -34,6 +34,8 @@ in
     fossil tk tcl
 
     gdb
+
+    neovide
 
     bat
     ripgrep
