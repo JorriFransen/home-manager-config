@@ -29,6 +29,10 @@ colorscheme gruvbox
 
 if exists('g:neovide')
     set guifont=FiraCode\ Nerd\ Font\ Mono:h8.5
+    let g:neovide_remember_window_size = v:true
+
+    let g:neovide_cursor_animation_length=0.001
+    let g:neovide_cursor_trail_length=0.001
 endif
 
 let mapleader = " "
