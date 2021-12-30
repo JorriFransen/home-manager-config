@@ -35,8 +35,6 @@ in
 
     gdb
 
-    neovide
-
     bat
     ripgrep
     colordiff
@@ -48,6 +46,7 @@ in
   ]
   ++ lib.optionals isNixOS
   [
+    neovide
     nextcloud-client
     passff-host
     (firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
