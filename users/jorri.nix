@@ -33,6 +33,8 @@ in
     git gh
     fossil tk tcl
 
+    gitkraken
+
     gdb
 
     bat
