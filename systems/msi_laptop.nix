@@ -110,7 +110,7 @@ in
 
   users.users.jorri = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "libvirtd" ];
   };
 
   # List packages installed in system profile. To search, run:
@@ -123,11 +123,15 @@ in
     zsh
 
     pinentry_qt
+    virt-manager
 
     nvidia-offload
   ];
 
   environment.pathsToLink = [ "/share/zsh" ];
+
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;
 
   programs.steam.enable = true;
 
