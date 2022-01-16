@@ -125,6 +125,9 @@ in
     pinentry_qt
     virt-manager
 
+    qogir-theme
+    qogir-icon-theme
+
     nvidia-offload
   ];
 
