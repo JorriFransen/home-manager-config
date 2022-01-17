@@ -5,8 +5,8 @@
       src = fetchFromGitHub {
         owner = "JorriFransen";
         repo = "st";
-        rev = "f3f0dba60c6254825415c8921c355e2e56489633";
-        hash = "sha256-Q/66KfT+8ZXebXjYXQiEPRRMmXQwZMRFXYrShPlLsxE=";
+        rev = "3cc61ae4ed24da0a40d99165b2d74094cb0b9c51";
+        hash = "sha256-Jtf83mRdCOKNXtcCo96b7+zZcVcO78QeACJAhnLiHUQ=";
       };
       buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
     }))
