@@ -5,8 +5,9 @@
       src = fetchFromGitHub {
         owner = "JorriFransen";
         repo = "st";
-        rev = "nixos";
-        sha256 = "15v6xm79gbjpdjldl5rs3vpnwmvhl81smzx3l08v61m75sccxd6x";
+        rev = "6a0be17d4e6967fcabde56dbd96da872ba98154c";
+        #hash = "sha256-do2cpdclphzDs3SaO5c6J/5Iu4wQXDfDNQ2o9naMf3u=";
+        hash = "sha256-pzZ6znQO0g0RPmZLgWCSg/FgVZUu+Cj0WrXHqRgIw8o=";
       };
       buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
     }))
