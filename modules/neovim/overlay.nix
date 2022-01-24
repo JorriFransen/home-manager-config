@@ -1,6 +1,6 @@
 (self: super: {
   neovim-unwrapped = super.neovim-unwrapped.overrideAttrs (old: {
-    version = "0.6.0";
+    version = "0.6.1";
     src = super.fetchFromGitHub {
       owner = "neovim";
       repo = "neovim";

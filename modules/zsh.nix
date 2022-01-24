@@ -68,10 +68,15 @@
           text=$(command man "$@") && echo "$text" | col -b | vim -R +":set ft=man nomod nonu noma nolist colorcolumn=" - ;
       }
 
+      gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
       export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
       gpgconf --launch gpg-agent
 
       source ~/.p10k.zsh
+
+      source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+      export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels''${NIX_PATH:+:$NIX_PATH}
+
     '';
   };
 
