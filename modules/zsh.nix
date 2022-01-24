@@ -76,8 +76,11 @@
       source ~/.p10k.zsh
 
       source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-      export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels''${NIX_PATH:+:$NIX_PATH}
 
+      NIX_PATH=$HOME/.nix-defexpr/channels
+      [ -f "/nix/var/nix/profiles/per-user/root/channels" ] && NIX_PATH=$NIX_PATH:/nix/var/profiles/per-user/root/channels
+      #NIX_PATH=$NIX_PATH''${NIX_PATH:+:$NIX_PATH}
+      export NIX_PATH
     '';
   };
 
