@@ -11,7 +11,7 @@ in
   };
 
   nixpkgs.overlays = [
-    ( import ./overlay.nix )
+    #( import ./overlay.nix )
   ];
 
   programs.neovim = {
@@ -55,6 +55,8 @@ in
         (plugins: with plugins; [
           tree-sitter-nix
           tree-sitter-cpp
+          tree-sitter-c
+          tree-sitter-bash
           tree-sitter-lua
         ])
       )
