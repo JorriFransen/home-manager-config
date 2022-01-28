@@ -43,7 +43,7 @@ in
 
     xclip
 
-    pass
+    #pass
 
   ]
   ++ lib.optionals isNixOS
