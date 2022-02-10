@@ -68,6 +68,7 @@ nnoremap <leader>ep :cp<cr>
 nnoremap <C-k> :cp<cr>
 
 noremap <leader>ga :CocCommand clangd.switchSourceHeader<CR>
+noremap <leader>gs :CocCommand clangd.switchSourceHeader vsplit<CR>
 
 set listchars=eol:·,tab:⍿·,trail:×
 "set list
