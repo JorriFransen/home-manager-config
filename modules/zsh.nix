@@ -31,6 +31,7 @@
       nd = "nordvpn disconnect && sudo systemctl stop nordvpnd";
       sctl = "systemctl";
       ssctl = "sudo systemctl ";
+      ivpnui = "/opt/ivpn/ui/bin/ivpn-ui";
     };
 
     sessionVariables = {
