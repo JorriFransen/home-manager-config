@@ -43,7 +43,10 @@ in
 
     xclip
 
-    #pass
+    pass
+    pinentry.qt
+    gnupg
+
 
   ]
   ++ lib.optionals isNixOS
@@ -53,6 +56,11 @@ in
     passff-host
     (firefox.override { extraNativeMessagingHosts = [ passff-host ]; } )
   ];
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryFlavor = "qt";
+  };
 
   programs.git = {
     enable = true;
